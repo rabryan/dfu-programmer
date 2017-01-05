@@ -180,6 +180,7 @@ static struct target_mapping_structure target_map[] = {
     { "stm32f4_C",      tar_stm32f4_C,      DC_STM32,  0xdf11, 0x0483, 0x40000, 0x0000, BL_EXTRA,  512,   0,      0 },
     { "stm32f4_E",      tar_stm32f4_E,      DC_STM32,  0xdf11, 0x0483, 0x80000, 0x0000, BL_EXTRA,  512,   0,      0 },
     { "stm32f4_G",      tar_stm32f4_G,      DC_STM32,  0xdf11, 0x0483, 0x100000,0x0000, BL_EXTRA,  512,   0,      0 },
+    { "samd21",         tar_samd21,         ADC_ATSAM, 0x7551, 0x1209, 0x100000,0x0000, BL_EXTRA,  512,   0,      0 },
     { NULL }
     // END_TARGET_LIST_LINE .. used for autocompletion script
 };
@@ -281,6 +282,7 @@ static void list_targets(int mode)
             case ADC_AVR32: dev_type_name = "AVR32"; break;
             case ADC_XMEGA: dev_type_name = "XMEGA"; break;
             case DC_STM32:  dev_type_name = "STM32F4"; break;
+            case ADC_ATSAM: dev_type_name = "ATSAM"; break;
             default:        dev_type_name = NULL;    break;
             }
             if( dev_type_name != NULL ) {

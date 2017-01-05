@@ -727,6 +727,7 @@ static int32_t dfu_make_idle( dfu_device_t *device,
                 DEBUG( "Resetting the device\n" );
 #ifdef HAVE_LIBUSB_1_0
                 libusb_reset_device( device->handle );
+                libusb_release_interface( device->handle, device->interface );
 #else
                 usb_reset( device->handle );
 #endif
